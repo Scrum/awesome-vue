@@ -1,0 +1,14 @@
+name: Awesome readme lint
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - master
+jobs:
+  build:
+    name: awesome readme lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install --global awesome-lint
+      - run: awesome-lint
