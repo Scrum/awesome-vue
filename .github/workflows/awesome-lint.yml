@@ -1,4 +1,4 @@
-name: Awesome readme lint double link action
+name: Awesome readme lint
 on:
   pull_request:
     types: [opened, synchronize]
@@ -6,7 +6,7 @@ on:
       - master
 jobs:
   build:
-    name: awesome readme lint double link
+    name: awesome readme lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
